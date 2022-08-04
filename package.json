@@ -1,0 +1,26 @@
+{
+  "name": "passport-twitter-2",
+  "version": "0.0.1",
+  "description": "Passport Strategy for Twitter API v2",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EriksRemess/passport-twitter-2.git"
+  },
+  "keywords": [
+    "Passport",
+    "Twitter"
+  ],
+  "author": "Ēriks Remess <eriks@remess.lv>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EriksRemess/passport-twitter-2/issues"
+  },
+  "homepage": "https://github.com/EriksRemess/passport-twitter-2",
+  "dependencies": {
+    "passport": "^0.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
