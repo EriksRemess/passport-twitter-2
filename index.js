@@ -73,6 +73,9 @@ export default class Strategy extends PassportStrategy {
         return this.error(error);
       }
     }
+    if (req.query?.error) {
+      return this.fail(req.query.error === "access_denied" ? "You denied the app!" : String(req.query.error));
+    }
     let state = generateRandomString(32);
     let code_verifier = generateRandomString(128);
     let code_challenge = crypto
