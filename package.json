@@ -1,6 +1,6 @@
 {
   "name": "passport-twitter-2",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Passport Strategy for Twitter API v2",
   "main": "index.js",
   "type": "module",
