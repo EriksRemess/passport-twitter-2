@@ -9,18 +9,20 @@
 ## Usage
 
 #### Configure Strategy
-    import { Strategy as TwitterStrategy } from 'passport-twitter-2';
-    passport.use(new TwitterStrategy({
-        clientID: TWITTER_CLIENT_ID,
-        appKey: TWITTER_CLIENT_SECRET,
-        callbackURL: "http://localhost:3000/auth/twitter/callback"
-      },
-      function(accessToken, profile, done) {
-        User.findOrCreate({ twitter: profile.id }, function (err, user) {
-          return done(err, user);
-        });
-      }
-    ));
+```js
+import { Strategy as TwitterStrategy } from 'passport-twitter-2';
+passport.use(new TwitterStrategy({
+    clientID: TWITTER_CLIENT_ID,
+    appKey: TWITTER_CLIENT_SECRET,
+    callbackURL: "http://localhost:3000/auth/twitter/callback"
+  },
+  function(accessToken, profile, done) {
+    User.findOrCreate({ twitter: profile.id }, function (err, user) {
+      return done(err, user);
+    });
+  }
+));
+```
 
 #### Authenticate Requests
 
@@ -29,19 +31,24 @@ authenticate requests.
 
 For example, as route middleware in an [Express](http://expressjs.com/)
 application:
+```js
+app.get('/auth/twitter',
+  passport.authenticate('twitter'));
 
-    app.get('/auth/twitter',
-      passport.authenticate('twitter'));
-
-    app.get('/auth/twitter/callback',
-      passport.authenticate('twitter', { failureRedirect: '/login' }),
-      function(req, res) {
-        // Successful authentication, redirect home.
-        res.redirect('/');
-      });
+app.get('/auth/twitter/callback',
+  passport.authenticate('twitter', { failureRedirect: '/login' }),
+  function(req, res) {
+    // Successful authentication, redirect home.
+    res.redirect('/');
+  });
+```
 
 ## Notes
-For Node.js 18+ you can skip installing node-fetch with `npm i passport-twitter-2--omit=optional` and use built-in fetch instead.
+For Node.js 18+ you can skip installing node-fetch with
+```bash
+npm i passport-twitter-2 --omit=optional
+```
+and use built-in fetch instead.
 
 ## Credits
 
