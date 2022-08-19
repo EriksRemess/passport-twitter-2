@@ -41,7 +41,7 @@ application:
       });
 
 ## Notes
-Requires Node 18+, as the module uses Node's built-in Fetch.
+For Node.js 18+ you can skip installing node-fetch with `npm i passport-twitter-2--omit=optional` and use built-in fetch instead.
 
 ## Credits
 

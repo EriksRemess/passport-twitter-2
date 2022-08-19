@@ -3,6 +3,10 @@ import {
 } from 'passport';
 import crypto from 'crypto';
 
+if (typeof fetch === "undefined") {
+  globalThis.fetch = (await import("node-fetch")).default;
+}
+
 const generateRandomString = (symbols) => {
   const keys = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-._~';
   let text = '';
