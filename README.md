@@ -3,8 +3,9 @@
 [Passport](http://passportjs.org/) strategy for authenticating with Twitter API v2
 
 ## Install
-
-    $ npm install passport-twitter-2
+```bash
+npm install passport-twitter-2
+```
 
 ## Usage
 

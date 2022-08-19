@@ -21,8 +21,13 @@
   "dependencies": {
     "passport": "^0.6.0"
   },
-  "optionalDependencies": {
-    "node-fetch": "^3.2.10"
+  "peerDependencies": {
+    "node-fetch": "*"
+  },
+  "peerDependenciesMeta": {
+    "node-fetch": {
+      "optional": true
+    }
   },
   "engines": {
     "node": ">=18.0.0"
