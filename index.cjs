@@ -75,7 +75,7 @@ class Strategy extends PassportStrategy {
         if (!profile) {
           return this.fail('No profile!');
         }
-        return this._verify(access_token, refresh_token, profile, (error, user, info) => {
+        return this._verify(req, access_token, refresh_token, profile, (error, user, info) => {
           if (error) return this.error(error);
           if (!user) return this.fail(info);
           return this.success(user, info);
