@@ -116,4 +116,6 @@ class Strategy extends PassportStrategy {
   }
 }
 
-module.exports = Strategy;
+module.exports = {
+  Strategy
+};
