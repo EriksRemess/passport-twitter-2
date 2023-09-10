@@ -117,5 +117,6 @@ class Strategy extends PassportStrategy {
 }
 
 module.exports = {
+  default: Strategy,
   Strategy
 };
