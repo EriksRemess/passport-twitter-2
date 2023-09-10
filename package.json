@@ -2,7 +2,8 @@
   "name": "passport-twitter-2",
   "version": "0.0.9",
   "description": "Passport Strategy for Twitter API v2",
-  "main": "index.js",
+  "main": "index.cjs",
+  "module": "index.js",
   "type": "module",
   "repository": {
     "type": "git",
@@ -23,5 +24,9 @@
   },
   "optionalDependencies": {
     "node-fetch": "^2.6.13"
+  },
+  "exports": {
+    "import": "./index.js",
+    "require": "./index.cjs"
   }
 }
